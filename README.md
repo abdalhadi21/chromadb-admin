@@ -6,8 +6,8 @@ Admin UI for the Chroma embedding database, built with Next.js
 
 ## Links：
 
-* GitHub Repo: [https://github.com/flanker/chromadb-admin](https://github.com/flanker/chromadb-admin)
-* Chroma Official Website [https://docs.trychroma.com](https://docs.trychroma.com)
+- GitHub Repo: [https://github.com/flanker/chromadb-admin](https://github.com/flanker/chromadb-admin)
+- Chroma Official Website [https://docs.trychroma.com](https://docs.trychroma.com)
 
 ## Authentication Support
 
@@ -39,7 +39,7 @@ docker run -p 3000:3000 fengzhichao/chromadb-admin
 
 and visit https://localhost:3000⁠ in the browser.
 
-*NOTE*: Use `http://host.docker.internal:8000` for the connection string if you want to connect to a ChromaDB instance running locally.
+_NOTE_: Use `http://host.docker.internal:8000` for the connection string if you want to connect to a ChromaDB instance running locally.
 
 ## Build and Run with Docker locally
 

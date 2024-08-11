@@ -1,11 +1,11 @@
-import { Icon123, IconBlockquote, IconBraces } from '@tabler/icons-react';
-import { Text, List, Container, Tabs, rem, ScrollArea } from '@mantine/core';
+import { Icon123, IconBlockquote, IconBraces } from '@tabler/icons-react'
+import { Text, List, Container, Tabs, rem, ScrollArea } from '@mantine/core'
 
-import type { ContextModalProps } from '@mantine/modals';
-import type { Record } from '@/lib/types';
+import type { ContextModalProps } from '@mantine/modals'
+import type { Record } from '@/lib/types'
 
 const RecordDetailModal = ({ context, id, innerProps }: ContextModalProps<{ record: Record }>) => {
-  const iconStyle = { width: rem(14), height: rem(14) };
+  const iconStyle = { width: rem(14), height: rem(14) }
 
   return (
     <Tabs defaultValue="Document">
@@ -57,7 +57,7 @@ const RecordDetailModal = ({ context, id, innerProps }: ContextModalProps<{ reco
         </Container>
       </Tabs.Panel>
     </Tabs>
-  );
-};
+  )
+}
 
-export default RecordDetailModal;
+export default RecordDetailModal
