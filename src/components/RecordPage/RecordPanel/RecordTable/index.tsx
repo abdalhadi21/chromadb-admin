@@ -32,22 +32,28 @@ const RecordTable = ({ withQuery, recordsPage }: { withQuery: boolean; recordsPa
         </Table.Tr>
       </Table.Thead>
       <Table.Tbody>
-        {recordsPage?.records.map(record => (
-          <Table.Tr key={record.id} onClick={() => openDetailModal(record)}>
-            <Table.Td className={styles.td}>
-              <RecordRowActionMenu embedding={record.embedding.join(', ')} />
-            </Table.Td>
-            {withQuery && <Table.Td className={styles.td}>{record.distance}</Table.Td>}
-            <Table.Td className={styles.td}>
-              <Text span size={'sm'}>
-                {record.id}
-              </Text>
-            </Table.Td>
-            <Table.Td className={styles.td}>{record.document}</Table.Td>
-            <Table.Td className={styles.td}>{record.metadata ? JSON.stringify(record.metadata) : ''}</Table.Td>
-            <Table.Td className={styles.td}>{record.embedding.join(', ')}</Table.Td>
-          </Table.Tr>
-        ))}
+      {recordsPage?.records.map(record => (
+  <Table.Tr key={record.id} onClick={() => openDetailModal(record)}>
+    <Table.Td className={styles.td}>
+      <RecordRowActionMenu
+        embedding={Array.isArray(record.embedding) ? record.embedding.join(', ') : 'No Embedding'}
+      />
+    </Table.Td>
+    {withQuery && <Table.Td className={styles.td}>{record.distance}</Table.Td>}
+    <Table.Td className={styles.td}>
+      <Text span size={'sm'}>
+        {record.id}
+      </Text>
+    </Table.Td>
+    <Table.Td className={styles.td}>{record.document}</Table.Td>
+    <Table.Td className={styles.td}>
+      {record.metadata ? JSON.stringify(record.metadata) : ''}
+    </Table.Td>
+    <Table.Td className={styles.td}>
+      {Array.isArray(record.embedding) ? record.embedding.join(', ') : 'No Embedding'}
+    </Table.Td>
+  </Table.Tr>
+))}
       </Table.Tbody>
     </Table>
   )
